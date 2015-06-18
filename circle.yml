@@ -2,7 +2,7 @@ deployment:
   staging:
     branch: master
     commands:
-      - git push git@heroku.com:frozen-thicket-4089.git $CIRCLE_SHA1:master:
+      - git push git@heroku.com:frozen-thicket-4089.git $CIRCLE_SHA1:refs/heads/master
           timeout: 600
 checkout:
   post:
