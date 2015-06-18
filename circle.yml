@@ -1,0 +1,9 @@
+deployment:
+  staging:
+    branch: master
+    heroku:
+      appname: frozen-thicket-4089
+      
+checkout:
+  post:
+    - git tag build_$CIRCLE_BUILD_NUM
