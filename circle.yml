@@ -1,9 +1,9 @@
 deployment:
   staging:
     branch: master
-    heroku:
-      appname: frozen-thicket-4089
-      
+    commands:
+      - git push git@heroku.com:frozen-thicket-4089.git $CIRCLE_SHA1:master:
+          timeout: 600
 checkout:
   post:
     - git tag build_$CIRCLE_BUILD_NUM
